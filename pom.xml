@@ -7,7 +7,15 @@
    <groupId>com.codecool</groupId>
    <artifactId>filepartreader</artifactId>
    <version>1.0-SNAPSHOT</version>
-   <packaging>jar</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <packaging>jar</packaging>
    <name>FilePartReader testing with JUnit</name>
 
    <dependency>
