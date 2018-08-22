@@ -1,7 +1,6 @@
 package com.codecool.java;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
@@ -25,7 +24,6 @@ public class FilePartReader {
 
         if (toLine < fromLine) throw new IllegalArgumentException("toLine have to be bigger than fromLine");
         this.toLine = toLine;
-
     }
 
     private String read() throws IOException {
@@ -34,7 +32,6 @@ public class FilePartReader {
         String content = "";
         while((line = fileReader.readLine()) != null) {
             content += line +";";
-            //System.out.println(content);
         }
         fileReader.close();
         return content;
@@ -47,8 +44,6 @@ public class FilePartReader {
         for (Integer i = fromLine-1; i < toLine; i++) {
             linesToPrint += lines.get(i) + " ";
         }
-
-        //System.out.println(linesToPrint);
         return linesToPrint;
     }
 
