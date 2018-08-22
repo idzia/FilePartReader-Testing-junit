@@ -35,7 +35,7 @@ class FilePartReaderTest {
     public void testReadLines1_2() throws IOException {
         FilePartReader file = new FilePartReader();
         file.setup("src/main/resources/test_data.txt", 1, 2);
-        assertEquals("1a1 2b 2a ", file.readLines());
+        assertEquals("1a1 2b 2a", file.readLines());
     }
 
     @Test
@@ -43,7 +43,7 @@ class FilePartReaderTest {
         FilePartReader file = new FilePartReader();
         assertAll("lines24", ()->{
             file.setup("src/main/resources/test_data.txt", 2, 4);
-            assertEquals("2b 2a 3c 3b 3a 4d 4cr 4bb4 4a ", file.readLines());
+            assertEquals("2b 2a 3c 3b 3a 4d 4cr 4bb4 4a", file.readLines());
         });
     }
 
@@ -51,7 +51,7 @@ class FilePartReaderTest {
     public void testReadLinesAll() throws IOException {
         FilePartReader file = new FilePartReader();
         file.setup("src/main/resources/test_data.txt", 1, 7);
-        String allLines = "1a1 2b 2a 3c 3b 3a 4d 4cr 4bb4 4a 5e 5d 5c 5b 5ax 6f 6ea 6d 6ca 6bb 6a 7g 7f 7ea ";
+        String allLines = "1a1 2b 2a 3c 3b 3a 4d 4cr 4bb4 4a 5e 5d 5c 5b 5ax 6f 6ea 6d 6ca 6bb 6a 7g 7f 7ea";
         assertEquals(allLines, file.readLines());
     }
 

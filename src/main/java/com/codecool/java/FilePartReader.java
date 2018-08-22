@@ -44,7 +44,9 @@ public class FilePartReader {
         for (Integer i = fromLine-1; i < toLine; i++) {
             linesToPrint += lines.get(i) + " ";
         }
-        return linesToPrint;
+
+        System.out.println(linesToPrint.trim());
+        return linesToPrint.trim();
     }
 
 }
